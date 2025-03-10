@@ -1,0 +1,377 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 0;
+    
+}
+
+html,body {
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden !important;
+    overflow-y: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Added flexbox to body */
+    flex-direction: column; /* Added flex direction to body */
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.firstpage {
+    background-image: url('background.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#navlist{
+    list-style: none;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 10px;
+    align-items: center;
+    
+    flex-wrap: wrap;
+    max-width: 100%;
+
+}
+nav{
+    width: 100%;
+    overflow-x: none;
+}
+
+.navbar{
+    width: 100%;
+    max-width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+#navitems{
+    margin-right: 34px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    
+}
+#navitems a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.484);
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+}
+
+.text1{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: white;
+    gap: 10px;
+    margin-left: 20px;
+    margin-bottom: 60px;
+
+
+}
+.text1 p{
+    color: rgba(229, 229, 229, 1);
+    font-size: 12px;
+    font-weight: lighter;
+}
+.text1 h2{
+    color: rgba(248, 249, 250, 1);
+    font-size: 25px;
+    font-weight: bold;
+}
+.secondpg {
+    background-color: white; /* Light background for the second page */
+    padding: 20px 0; /* Add some padding top and bottom */
+}
+
+.container {
+    width: 80%; 
+    max-width: 1200px; 
+    background-color: white;
+    padding: 20px;
+   
+    margin: 0 auto; /* Center the container */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grid-item .content {
+    padding: 15px;
+}
+
+.grid-item h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+}
+
+.grid-item p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px; /* Add some space above the button */
+}
+
+.button {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+}
+.thirdpage{
+    background: rgba(33, 37, 41, 1);
+    display: flex;
+    flex-direction: row;
+    color: rgba(248, 249, 250, 1);
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 135vh; /* Ensures full viewport height */
+    width: 100%;
+    position: relative;
+    overflow: hidden; 
+
+}
+.halfpage {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+}
+
+.rightside {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch; 
+    height: 100%;
+    position: relative;
+}
+.rightside img {
+    width: 100%; 
+    height: 100%; 
+    max-width: none; 
+    object-fit: cover
+}
+.text-overlay {
+    position: absolute;
+    top: 40%; /* Adjust position */
+    left: 10%; /* Adjust position */
+    color: rgba(248, 249, 250, 1);
+    
+    text-align: center;
+    padding: 15px;
+    width: 80%;
+    
+}
+.text-overlay p{
+    font-weight:lighter;
+    color: rgba(229, 229, 229, 1);
+}
+.leftside {
+    flex-basis: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: left;
+    color: rgba(248, 249, 250, 1);
+    height: 100%;
+    overflow-y: auto; 
+}
+.leftside h1 {
+    font-size: 24px;
+    font-weight: bold;
+    
+}
+.leftside h3 {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    
+}
+.leftside p {
+    font-size: 12px;
+    font-weight: lighter;
+    line-height: 1.5;
+    padding-bottom: 20px;
+    color:rgba(229, 229, 229, 1)
+}
+.leftside img {
+    width: 180px;
+    height: 180px; /* Adjust image size */
+    margin-bottom: 20px; 
+    float:left;
+    padding-right: 20px;
+}
+.rightside h2, p{
+    z-index: 1;
+}
+.fourthpage{
+    width: 100vw;
+    height: 130vh;
+    position: relative;
+    
+}
+.fourthpage h2{
+    font-family:"Poppins",sans-serif ;
+    color: rgba(73, 80, 87, 1);
+    margin: 20px;
+    padding-left: 12px;
+    margin-bottom: 70px;
+
+   
+}
+.fourthparts img {
+    margin-bottom: 15px; 
+}
+
+.fourthparts{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    padding: 10px;
+    align-items: center;
+    gap: 15px;
+    
+}
+.fourthparts h3,p{
+    font-size: 16px;
+    color: rgba(73, 80, 87, 1);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.fourthparts p{
+    font-size: 12px;
+    font-weight: lighter;
+    margin-bottom: 15px; 
+
+}
+
+.footerclass {
+    width: 100%;
+    max-width: 100%;
+    
+    height: 130px;
+    min-height: 163px;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(33, 37, 41, 1);
+    color: rgba(248, 249, 250, 1);
+    margin-top: auto;
+    border-top: 1px solid rgba(248, 249, 250, 0.2);
+    overflow: hidden
+    
+}
+
+footer {
+    width: 100%;
+   
+    display: flex;
+    justify-content: center; /* Center the insidefooter horizontally */
+    align-items: center;
+    padding: 0 20px;
+    flex-shrink: 0;
+}
+
+.insidefooter {
+    width: 100%; /* Ensure insidefooter takes full width */
+    display: flex;
+    
+    flex-direction: column; 
+    padding: 0;
+    margin: 0;
+}
+
+#footerlisttop {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* Align items to the ends */
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.footitems {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.footitems a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.484);
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+}
+
+.address-copyright {
+    display: flex;
+    justify-content: space-between; /* Align address and copyright to ends */
+    align-items: center; /* Vertically align items */
+    font-size: 10px;
+    border-top: 1px solid rgba(248, 249, 250, 0.2);
+    padding-top: 10px;
+}
+
+.address-copyright p {
+    font-size: small;
+    margin: 10px; 
+   
+}
