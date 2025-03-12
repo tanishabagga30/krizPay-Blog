@@ -6,18 +6,18 @@
     
 }
 
-html,body {
+html, body {
+    height: 100%; /* Ensure the body takes the full height */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox */
+    flex-direction: column;
     font-family: "Poppins", sans-serif;
-    overflow-x: hidden !important;
-    overflow-y: auto;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex; /* Added flexbox to body */
-    flex-direction: column; /* Added flex direction to body */
-    min-height: 100vh;
     overflow-x: hidden;
-    overflow-y: auto;
+}
+
+.main-content {
+    flex: 1; /* Allow main content to grow and fill available space */
+    padding-bottom: 50px; /* Space for footer */
 }
 
 .firstpage {
@@ -32,6 +32,7 @@ html,body {
     justify-content: space-between;
     max-width: 100%;
     overflow-wrap: break-word;
+    min-height: 100vh;
 }
 
 .navbar{
@@ -47,15 +48,14 @@ html,body {
     justify-content: space-between;
     margin-left: 15px;
     margin-right: 10px;
-    align-items: center;
-    
+    align-items: center;  
     flex-wrap: wrap;
     max-width: 100%;
 
 }
 nav{
     width: 100%;
-    overflow-x: none;
+    overflow-x: hidden;
 }
 
 .navbar{
@@ -82,7 +82,7 @@ nav{
     text-decoration: none;
     color: rgba(255, 255, 255, 0.484);
     font-family: "Poppins", sans-serif;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .text1{
@@ -107,8 +107,8 @@ nav{
     font-weight: bold;
 }
 .secondpg {
-    background-color: white; /* Light background for the second page */
-    padding: 20px 0; /* Add some padding top and bottom */
+    background-color: white; 
+    padding: 20px 0; 
 }
 
 .container {
@@ -117,7 +117,7 @@ nav{
     background-color: white;
     padding: 20px;
    
-    margin: 0 auto; /* Center the container */
+    margin: 0 auto; 
 }
 
 .grid-container {
@@ -152,10 +152,14 @@ nav{
     font-size: 0.9em;
     color: #555;
 }
-
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller items */
+    }
+}
 .button-container {
     text-align: center;
-    margin-top: 20px; /* Add some space above the button */
+    margin-top: 20px; 
 }
 
 .button {
@@ -171,44 +175,54 @@ nav{
 .thirdpage{
     background: rgba(33, 37, 41, 1);
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* Changed to column for responsiveness */
     color: rgba(248, 249, 250, 1);
     font-family: "Poppins", sans-serif;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    height: 135vh; /* Ensures full viewport height */
-    width: 100%;
-    position: relative;
-    overflow: hidden; 
+    align-items: center; /* Center content */
+    padding: 20px;
+   
 
 }
 .halfpage {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
+    max-width: 1200px;
     margin: auto;
+    justify-content: space-between;
+    
+}
+.leftside, .rightside {
+    flex-basis: 100%; /* Full width on small screens */
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .leftside, .rightside {
+        flex-basis: 50%; /* Half width on larger screens */
+    }
+    .thirdpage{
+        flex-direction: row;
+    }
 }
 
 .rightside {
-    flex-basis: 50%;
+    flex: 1;
     display: flex;
     justify-content: flex-end;
-    align-items: stretch; 
-    height: 100%;
+    align-items: stretch;
     position: relative;
+    
 }
 .rightside img {
-    width: 100%; 
-    height: 100%; 
-    max-width: none; 
+    width: 100%;
+    height: 100%;
     object-fit: cover
 }
 .text-overlay {
     position: absolute;
-    top: 40%; /* Adjust position */
-    left: 10%; /* Adjust position */
+    top: 40%; 
+    left: 10%;
     color: rgba(248, 249, 250, 1);
     
     text-align: center;
@@ -221,110 +235,116 @@ nav{
     color: rgba(229, 229, 229, 1);
 }
 .leftside {
-    flex-basis: 50%;
-    padding: 50px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     text-align: left;
-    color: rgba(248, 249, 250, 1);
-    height: 100%;
-    overflow-y: auto; 
+    
 }
 .leftside h1 {
     font-size: 24px;
     font-weight: bold;
+    margin-left: 30px;
     
 }
 .leftside h3 {
     font-size: 16px;
     font-weight: bold;
-    padding-bottom: 20px;
+    margin-top: 0;
+  
     
 }
 .leftside p {
     font-size: 12px;
     font-weight: lighter;
     line-height: 1.5;
-    padding-bottom: 20px;
-    color:rgba(229, 229, 229, 1)
+    color: rgba(229, 229, 229, 1);
+    margin-left: 30px; /* Maintain left margin for text */
+    margin-top: 10px;
+
 }
 .leftside img {
     width: 180px;
     height: 180px; /* Adjust image size */
     margin-bottom: 20px; 
+    margin-right: 10px;
     float:left;
-    padding-right: 20px;
-}
-.rightside h2, p{
-    z-index: 1;
-}
-.fourthpage{
-    width: 100vw;
-    height: 130vh;
-    position: relative;
-    
-}
-.fourthpage h2{
-    font-family:"Poppins",sans-serif ;
-    color: rgba(73, 80, 87, 1);
-    margin: 20px;
-    padding-left: 12px;
-    margin-bottom: 70px;
-
    
 }
-.fourthparts img {
-    margin-bottom: 15px; 
+.rightside h2,
+.rightside p {
+    z-index: 1;
 }
+.fourthpage {
+    width: 100vw;
+    position: relative;
+    padding: 20px;
+}
+.fourthpage h2 {
+    font-family: "Poppins", sans-serif;
+    color: rgba(73, 80, 87, 1);
+    margin-bottom: 30px;
+}
+
+
 
 .fourthparts{
     display: flex;
-    flex-direction: row;
-    margin: 20px;
-    padding: 10px;
-    align-items: center;
-    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 50px;
     
+}
+.part {
+    flex-basis: calc(25% - 20px);
+    min-width: 200px;
+}
+@media (min-width: 768px) {
+    .part {
+        flex-basis: calc(50% - 20px); /* Half width on medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .part {
+        flex-basis: calc(25% - 20px); /* Quarter width on large screens */
+    }
+}
+.fourthparts img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px; 
 }
 .fourthparts h3,p{
     font-size: 16px;
     color: rgba(73, 80, 87, 1);
-    padding-top: 15px;
-    padding-bottom: 15px;
 }
-.fourthparts p{
-    font-size: 12px;
-    font-weight: lighter;
-    margin-bottom: 15px; 
 
-}
 
 .footerclass {
     width: 100%;
-    max-width: 100%;
-    
-    height: 130px;
-    min-height: 163px;
-    overflow-y: hidden;
+    min-height: 150px; 
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(33, 37, 41, 1);
     color: rgba(248, 249, 250, 1);
-    margin-top: auto;
     border-top: 1px solid rgba(248, 249, 250, 0.2);
-    overflow: hidden
-    
+    position: relative; 
+    bottom: 0;
+    left: 0;
+    padding: 20px;
 }
 
 footer {
     width: 100%;
-   
+    max-width: 1200px; /* Limit width for better centering */
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
-    justify-content: center; /* Center the insidefooter horizontally */
+    flex-direction: column;
     align-items: center;
-    padding: 0 20px;
     flex-shrink: 0;
 }
 
@@ -363,8 +383,8 @@ footer {
 
 .address-copyright {
     display: flex;
-    justify-content: space-between; /* Align address and copyright to ends */
-    align-items: center; /* Vertically align items */
+    justify-content: space-between; 
+    align-items: center; 
     font-size: 10px;
     border-top: 1px solid rgba(248, 249, 250, 0.2);
     padding-top: 10px;
